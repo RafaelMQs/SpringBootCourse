@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button> <ion-icon name="menu"></ion-icon> </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Categorias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="goToCart()">
+      <ion-icon name="cart"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-list>
+    <ion-item button *ngFor="let item of items" (click)="showProdutos(item.id)">
+      <ion-thumbnail slot="start">
+        <img src="assets/imgs/categorias/cat{{item.id}}.jpg">
+      </ion-thumbnail>
+      <ion-label> {{item.nome}} </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

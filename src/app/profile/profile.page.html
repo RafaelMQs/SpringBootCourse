@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button> <ion-icon name="menu"></ion-icon> </ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img class="circle" [src]="cliente?.imageUrl || 'assets/imgs/avatar-blank.png'"> </ion-img>
+  <h2 style="text-align: center;"> {{cliente?.nome}} </h2>
+  <p style="text-align: center;"> {{cliente?.email}} </p>
+
+</ion-content>
